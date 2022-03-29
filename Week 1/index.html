@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+<!-- leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+
+</head>
+<body>
+
+	<div class="header">
+		<p style ="color:rgb(208, 255, 0)">The map below displays where Yoh and Daniel are currently!!!! </p>
+	</div>
+	<div class="sidebar">
+		<p style ="color:aqua">  The right displays where Yoh and Daniel are currently!!!! </p>
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+
+
+    <script>
+
+var map = L.map('map').setView([41.8902,12.4922], 17);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var marker = L.marker([41.8902,12.4930]).addTo(map)
+		.bindPopup('Where Daniel is watching Yoh')
+		.openPopup();	
+
+        var marker = L.marker([41.8902,12.4922]).addTo(map)
+		.bindPopup('Where Yoh is currently fighting gladiators!')
+		.openPopup();	
+
+        var marker = L.marker([41.8899,12.4922]).addTo(map)
+		.bindPopup("Where Yoh&#39;s  mortal enemy is currently watching Yoh!")
+		.openPopup();	
+
+    </script>
+
+
+
+
+
+</body>
+</html>

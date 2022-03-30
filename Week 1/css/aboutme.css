@@ -1,0 +1,14 @@
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+
+body {
+    color: rgb(217, 255, 0);
+}
+
+.content {
+    background-color: rgb(38, 131, 218);
+}

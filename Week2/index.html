@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Story</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+<!-- leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+
+</head>
+<body>
+
+	
+	
+	<div class="header">
+		<h1 style ="color:rgb(208, 255, 0)">Daniel's Legendary Travel Story!&nbsp;<img src="https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/1024/42586-airplane-icon.png" width=35px>
+		</h1>
+	</div>
+	<div class="sidebar">
+		<u><h2 style ="color:rgb(35, 152, 162)">I traveled to 5 places!</h2></u>
+		<p><b>Hey everyone!</b> <br><br>  To the right, we have an interactive map showing each of the 5 legendary places I have traveled too! <br><br>Click on the images below to learn more!</p>
+
+		<ol>
+			<li>Honolulu, Hawaii</li>
+	
+			<a href ="https://www.gohawaii.com/islands/oahu/regions/honolulu"> <img src="https://tourscanner.com/blog/wp-content/uploads/2021/07/best-things-to-do-in-Honolulu-Oahu-Hawaii.jpg" width=100px style="border:1px solid rgb(44, 36, 139)"> </a>
+		
+		 <br><br>
+			
+			<li>Las Vegas, Nevada</li>
+		
+			<a href ="https://www.visitlasvegas.com/"> <img src="https://res.cloudinary.com/simpleview/image/upload/v1497480003/clients/lasvegas/strip_b86ddbea-3add-4995-b449-ac85d700b027.jpg" width=100px height=50px style="border:1px solid rgb(44, 36, 139)"> </a>
+		
+			<br><br>
+
+			<li>Palm Springs, California</li>
+		
+			<a href ="https://visitpalmsprings.com/"><img src="https://img.theculturetrip.com/x/wp-content/uploads/2021/02/gettyimages-1173497229.jpg" width=100px style="border:1px solid rgb(44, 36, 139)"></a>
+		
+			<br><br>
+
+			<li>Phoenix, Arizona</li>
+		
+			<a href ="https://www.visitphoenix.com/"><img src="https://www.ourescapeclause.com/wp-content/uploads/2021/03/shutterstock_691184395-scaled.jpg" width=100px style="border:1px solid rgb(44, 36, 139)"></a>
+		
+			<br><br>
+
+			<li>Dana Point, California</li>
+				
+			<a href ="https://www.danapoint.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Dana_Point_a_city_in_southern_Orange_County_CA_Photo_D_Ramey_Logan.jpg" width=100px style="border:1px solid rgb(44, 36, 139)"></a>
+		
+			
+		 </ol>
+		  
+		  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=" https://img.icons8.com/color/480/thick-arrow-pointing-down--v1.png" width=55px height=25px>
+
+
+		  <p> Where would you want to go?</p>
+		  <form>  
+
+						  <input type="checkbox" id="Honolulu,Hawaii" name="Honolulu,Hawaii" value="Honolulu,Hawaii"/>    
+							 <label>Honolulu, Hawaii</label> <br>    
+						  <input type="checkbox" id="Las Vegas, Nevada" name="Las Vegas, Nevada" value="Las Vegas, Nevada"/>   
+							 <label>Las Vegas, Nevada</label> <br>    
+						  <input type="checkbox" id="Palm Springs, California" name="Palm Springs, California" value="Palm Springs, California"/>    
+							 <label>Palm Springs, California</label> <br>  
+						 <input type="checkbox" id="Phoenix, Arizona" name="PPhoenix, Arizona" value="Phoenix, Arizona"/>    
+							 <label>Phoenix, Arizona</label>  <br> 
+						 <input type="checkbox" id="Dana Point, California" name="Dana Point, California" value="Dana Point, California"/>    
+							 <label>Dana Point, California</label> 
+			</form>  
+
+
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+	<div class="leaflet-popup-tip-container">
+		<div class="stylePopup"> </div>
+	</div>
+
+
+    <script>
+
+
+alert("Welcome to Daniel's Legendary Adventure! \n\nLet's start with Dana Point in California!")
+
+
+let map = L.map('map').setView([36.778259,-119.417931], 4);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+	
+		let travel = [
+	{
+		'title':'Honolulu, Hawaii',
+		'description': 'Sunny and colorful experiece where you can dive in the Hawaiian culture and refresh in the magical water',
+		'lat': 21.315603,
+		'lon': 	-157.858093,
+		'travelpic': 'https://tourscanner.com/blog/wp-content/uploads/2021/07/best-things-to-do-in-Honolulu-Oahu-Hawaii.jpg'
+	},
+	{
+		'title':'Las Vegas, Nevada',
+		'description': 'Naughty experience but whatever happens in Vegas stays in Vegas',
+		'lat': 36.114647,
+		'lon': 	-115.172813,
+		'travelpic': 'https://res.cloudinary.com/simpleview/image/upload/v1497480003/clients/lasvegas/strip_b86ddbea-3add-4995-b449-ac85d700b027.jpg'
+	},
+	{
+		'title':'Palm Springs, California',
+		'description': 'Peaceful nature exeperience with the tram, organic food, and calm community',
+		'lat': 33.830517,
+		'lon': -116.545601,
+		'travelpic': 'https://img.theculturetrip.com/x/wp-content/uploads/2021/02/gettyimages-1173497229.jpg'
+	},
+	{
+		'title':'Phoenix, Arizona',
+		'description': 'Adventurous experience with different activities such as the trains, nutcracker performance, and visiting my uncle',
+		'lat': 33.448376,
+		'lon': -112.074036,
+		'travelpic': 'https://www.ourescapeclause.com/wp-content/uploads/2021/03/shutterstock_691184395-scaled.jpg'
+	},
+	{
+		'title':'Dana Point, California',
+		'description': 'Celebratory and joyful time for a wedding and seeing family',
+		'lat': 	33.466972,
+		'lon': -117.698105,
+		'travelpic': 'https://upload.wikimedia.org/wikipedia/commons/6/62/Dana_Point_a_city_in_southern_Orange_County_CA_Photo_D_Ramey_Logan.jpg'
+	
+	}
+]
+var markerIcon = L.icon({
+        iconUrl: 'http://www.clker.com/cliparts/I/l/L/S/W/9/map-marker-hi.png',
+        iconSize: [20, 30],
+        popupAnchor: [0,0]
+        });
+
+travel.forEach(function(item){
+	L.marker([item.lat, item.lon], {icon: markerIcon}).addTo(map)
+	.bindPopup("<b>" + item.title + "</b>" + "<br>" + "<br>"  + "<img src='" + item.travelpic + "'" + "height=200px width=300px style='border:1px solid rgb(0, 0, 0)'" + ">" + "<br>" + "<br>" + item.description)
+	.openPopup();
+});
+
+
+
+
+let btn = document.createElement("button");
+btn.innerHTML = "Save";
+btn.addEventListener("click", function () {
+  alert("Great choice! Let's go together!");
+});
+document.body.appendChild(btn);
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

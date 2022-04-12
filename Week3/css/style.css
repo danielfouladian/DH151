@@ -1,0 +1,57 @@
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+#map {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 120px 1fr;
+	grid-template-columns: 50% 50%; /* change to 50/50 split */
+	grid-template-areas: 
+	"header header"
+	"content sidebar"; /* swapped places */
+}
+
+.header {
+	grid-area: header;
+	padding:10px;
+	background-color: #333;
+	color: white;
+	font-size: 2em;
+}
+
+.sidebar {
+	color: white;
+	grid-area: sidebar;
+	padding:10px;
+	background-color: #555;
+}
+
+.content {
+	grid-area: content;
+}
+
+.sidebar-item {
+    padding: 10px; /* adds inner padding */
+    background: gainsboro; /* background color */
+    border: 1px solid gray; /* border width, style, and color */
+    margin: 5px; /* outer padding */
+}
+.sidebar {
+	grid-area: sidebar;
+	padding:10px;
+	background-color: #555;
+	overflow: auto; /* allows the sidebar to overflow with a scrollbar */
+}
+.sidebar-item {
+    padding: 10px; /* adds inner padding */
+    background: gainsboro; /* background color of the card */
+    border: 1px solid gray; /* border width and color */
+    margin: 5px; /* outer padding */
+	cursor: pointer; /* change cursor to hand on hover */
+}

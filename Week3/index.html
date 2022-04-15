@@ -1,33 +1,199 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>World</title>
+	<title>Travel Story</title>
 	<meta charset="utf-8" />
 
 	<!-- style sheets -->
 	<link rel="stylesheet" href="css/style.css">
 
-	<!-- leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<!-- jquery -->
+<!-- leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
 <body>
 
+	
+	
 	<div class="header">
-		My World
+		<h1 style ="color:rgb(208, 255, 0)">Daniel's Legendary Travel Story!&nbsp;<img src="https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/1024/42586-airplane-icon.png" width=35px>
+		</h1>
 	</div>
 	<div class="sidebar">
-		My Sidebar
+		<u><h2 style ="color:rgb(35, 152, 162)">I traveled to 5 places!</h2></u>
+		<p><b>Hey everyone!</b> <br><br>  To the right, we have an interactive map showing each of the 5 legendary places I have traveled too! <br><br>Click on the images below to learn more!</p>
+
+		<ol>
+			<li>Honolulu, Hawaii</li>
+	
+			<a href ="https://www.gohawaii.com/islands/oahu/regions/honolulu"> <img src="https://tourscanner.com/blog/wp-content/uploads/2021/07/best-things-to-do-in-Honolulu-Oahu-Hawaii.jpg" width=100px style="border:1px solid rgb(44, 36, 139)"> </a>
+		
+		 <br><br>
+			
+			<li>Las Vegas, Nevada</li>
+		
+			<a href ="https://www.visitlasvegas.com/"> <img src="https://res.cloudinary.com/simpleview/image/upload/v1497480003/clients/lasvegas/strip_b86ddbea-3add-4995-b449-ac85d700b027.jpg" width=100px height=50px style="border:1px solid rgb(44, 36, 139)"> </a>
+		
+			<br><br>
+
+			<li>Palm Springs, California</li>
+		
+			<a href ="https://visitpalmsprings.com/"><img src="https://img.theculturetrip.com/x/wp-content/uploads/2021/02/gettyimages-1173497229.jpg" width=100px style="border:1px solid rgb(44, 36, 139)"></a>
+		
+			<br><br>
+
+			<li>Phoenix, Arizona</li>
+		
+			<a href ="https://www.visitphoenix.com/"><img src="https://www.ourescapeclause.com/wp-content/uploads/2021/03/shutterstock_691184395-scaled.jpg" width=100px style="border:1px solid rgb(44, 36, 139)"></a>
+		
+			<br><br>
+
+			<li>Dana Point, California</li>
+				
+			<a href ="https://www.danapoint.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Dana_Point_a_city_in_southern_Orange_County_CA_Photo_D_Ramey_Logan.jpg" width=100px style="border:1px solid rgb(44, 36, 139)"></a>
+		
+			
+		 </ol>
+		 
+		  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=" https://img.icons8.com/color/480/thick-arrow-pointing-down--v1.png" width=55px height=25px>
+
+
+		  <p> Where would you want to go? Click to SAVE at the bottom!</p>
+		 <form>  
+
+						  <input type="checkbox" id="Honolulu,Hawaii" name="Honolulu,Hawaii" value="Honolulu,Hawaii"/>    
+							 <label>Honolulu, Hawaii</label> <br>    
+						  <input type="checkbox" id="Las Vegas, Nevada" name="Las Vegas, Nevada" value="Las Vegas, Nevada"/>   
+							 <label>Las Vegas, Nevada</label> <br>    
+						  <input type="checkbox" id="Palm Springs, California" name="Palm Springs, California" value="Palm Springs, California"/>    
+							 <label>Palm Springs, California</label> <br>  
+						 <input type="checkbox" id="Phoenix, Arizona" name="PPhoenix, Arizona" value="Phoenix, Arizona"/>    
+							 <label>Phoenix, Arizona</label>  <br> 
+						 <input type="checkbox" id="Dana Point, California" name="Dana Point, California" value="Dana Point, California"/>    
+							 <label>Dana Point, California</label> 
+			</form>  
+
+<br><br>
+
+
+
+<div class="slideshow-container">
+
+	<div class="mySlides fade">
+	  <div class="numbertext">1 / 10</div>
+	  <img src="https://i.natgeofe.com/n/75f2a750-9044-41c2-8f61-ccf1ec8710aa/waikki-beach-honolulu-hawaii_16x9.jpg" style="width:100%">
+	  <div class="text">Honolulu 1</div>
+	</div>
+  
+	<div class="mySlides fade">
+	  <div class="numbertext">2 / 10</div>
+	  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tUPeRerP-ELQ1fMlb3P_AiX6YCdhO_1rtA&usqp=CAU" style="width:100%">
+	  <div class="text">Honolulu 2</div>
+	</div>
+  
+	<div class="mySlides fade">
+	  <div class="numbertext">3 / 10</div>
+	  <img src="https://image.cnbcfm.com/api/v1/image/107039436-1648695721545-gettyimages-930099802-929_14_voahd-77-703.jpeg?v=1648695541&w=929&h=523&ffmt=webp" style="width:100%">
+	  <div class="text">Las Vegas, Nevada 1</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">4 / 10</div>
+		<img src="http://cdn.cnn.com/cnnnext/dam/assets/200501101707-mgm-resorts-hotels-las-vegas-strip-0317.jpg" style="width:100%">
+		<div class="text">Las Vegas, Nevada 2</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">5 / 10</div>
+		<img src="https://cdn.vox-cdn.com/thumbor/94YPV_YUxb7tECzwSanTPlRoQH0=/955x187:5186x2710/1200x900/filters:focal(2941x1276:3815x2150)/cdn.vox-cdn.com/uploads/chorus_image/image/55213233/shutterstock_1830981125.38.jpg" style="width:100%">
+		<div class="text">Palm Springs, CA 1</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">6 / 10</div>
+		<img src="https://i.natgeofe.com/n/4610a3ad-fe3c-423e-a5c6-19425bde0d19/golf-palmsprings-california_3x2.jpg" style="width:100%">
+		<div class="text">Palm Springs, CA 2</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">7 / 10</div>
+		<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/phoenix/148e5282_6056_4aca_9135_d0d5f25e9a9d_df00ab2b-7f9c-462e-a8a7-903f8757870e.jpg" style="width:100%">
+		<div class="text">Phoenix, Arizona 1</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">8 / 10</div>
+		<img src="https://assets.vogue.com/photos/62228a2974d063bc1f571d18/master/pass/HS9castleHS_HR_190826_0209.jpg" style="width:100%">
+		<div class="text">Phoenix, Arizona 2</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">9 / 10</div>
+		<img src="https://metrolinktrains.com/globalassets/explore/orange/dana-point-beach.jpg" style="width:100%">
+		<div class="text">Dana Point, CA 1</div>
+	  </div>
+
+	  <div class="mySlides fade">
+		<div class="numbertext">10 / 10</div>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Monarch_Beach_Dana_Point_California_photo_D_Ramey_Logan.jpg" style="width:100%">
+		<div class="text">Dana Point, CA 2</div>
+	  </div>
+
+  
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+
+  <div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  
+<p> Click on the travel place you want the map to fly to!!! Then, scroll back up on the sidebar to see :)</p>
+
+
+
+
 	</div>
 	<div class="content">
 		<div id="map"></div>
 	</div>
 
-	<!-- map javascript -->
-<script src="js/map.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="js/map.js"></script>
+
+
+
+
+   
+
+
+
 
 
 </body>

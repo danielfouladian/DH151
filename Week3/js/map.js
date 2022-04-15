@@ -1,98 +1,144 @@
 
-		// let's create some data
-		let data = [
-			{
-				'id': 0,
-				'title':'Osaka',
-				'lat': 34.6937,
-				'lon': 135.5023,
-				'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Osaka_Castle_02bs3200.jpg/320px-Osaka_Castle_02bs3200.jpg',
-				'description': "Osaka is a large port city and commercial center on the Japanese island of Honshu. It's known for its modern architecture, nightlife and hearty street food. The 16th-century shogunate Osaka Castle, which has undergone several restorations, is its main historical landmark. It's surrounded by a moat and park with plum, peach and cherry-blossom trees. Sumiyoshi-taisha is among Japan’s oldest Shinto shrines. ― Google"
+alert("Welcome to Daniel's Legendary Adventure! \n\nLet's start from UCLA in California!")
 
-			},
-			{
-				'id': 1,
-				'title':'Cali',
-				'lat': 3.4516,
-				'lon': -76.5320,
-				'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG/320px-Pascual_Guerrero_U-20WC_2011_CMR-NZL.JPG',
-				'description':"Cali is a Colombian city in the Valle del Cauca department, southwest of Bogotá. It’s known for salsa dancing and there are many clubs in the suburb of Juanchito. In Cali’s oldest quarter, the neoclassical San Pedro Cathedral houses paintings of the Quito School. Nearby is the 18th- and 19th-century San Francisco Religious Complex. La Merced Chapel is where the first mass was held after Cali was founded in 1536. ― Google"
-			},
-			{
-				'id': 2,
-				'title':'Bangkok',
-				'lat': 13.7563,
-				'lon': 100.5018,
-				'image': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Bangkok_skytrain_sunset.jpg/320px-Bangkok_skytrain_sunset.jpg',
-				'description':"Bangkok, Thailand’s capital, is a large city known for ornate shrines and vibrant street life. The boat-filled Chao Phraya River feeds its network of canals, flowing past the Rattanakosin royal district, home to opulent Grand Palace and its sacred Wat Phra Kaew Temple. Nearby is Wat Pho Temple with an enormous reclining Buddha and, on the opposite shore, Wat Arun Temple with its steep steps and Khmer-style spire. ― Google"
-			},
-			{
-				'id': 3,
-				'title':'Tokyo',
-				'lat': 35.6762,
-				'lon': 139.6503,
-				'image':'https://www.stofficetokyo.ch/sites/default/files/styles/featured_image_840x572_/public/2019-01/icu_dronei_34ab_170430-42_r.jpg?itok=mkG94UWD',
-				'description':"Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum). ― Google"
-			},
-			{
-				'id': 4,
-				'title':'Los Angeles',
-				'lat': 34.0522,
-				'lon': -118.2437,
-				'image':'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/UCLA_Royce_Hall.jpg/320px-UCLA_Royce_Hall.jpg',
-				'description':"Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry. Near its iconic Hollywood sign, studios such as Paramount Pictures, Universal and Warner Brothers offer behind-the-scenes tours. On Hollywood Boulevard, TCL Chinese Theatre displays celebrities’ hand- and footprints, the Walk of Fame honors thousands of luminaries and vendors sell maps to stars’ homes. ― Google"
-			},
-		]
+		let travel = [
+	{
+		'id': 0,
+		'title':'Honolulu, Hawaii',
+		'description': 'Sunny and colorful experiece where you can dive in the Hawaiian culture and refresh in the magical water',
+		'lat': 21.315603,
+		'lon': 	-157.858093,
+		'travelpic': 'https://tourscanner.com/blog/wp-content/uploads/2021/07/best-things-to-do-in-Honolulu-Oahu-Hawaii.jpg'
+	},
+	{
+		'id': 1,
+		'title':'Las Vegas, Nevada',
+		'description': 'Naughty experience but whatever happens in Vegas stays in Vegas',
+		'lat': 36.114647,
+		'lon': 	-115.172813,
+		'travelpic': 'https://res.cloudinary.com/simpleview/image/upload/v1497480003/clients/lasvegas/strip_b86ddbea-3add-4995-b449-ac85d700b027.jpg'
+	},
+	{
+		'id': 2,
+		'title':'Palm Springs, California',
+		'description': 'Peaceful nature exeperience with the tram, organic food, and calm community',
+		'lat': 33.830517,
+		'lon': -116.545601,
+		'travelpic': 'https://img.theculturetrip.com/x/wp-content/uploads/2021/02/gettyimages-1173497229.jpg'
+	},
+	{
+		'id': 3,
+		'title':'Phoenix, Arizona',
+		'description': 'Adventurous experience with different activities such as the trains, nutcracker performance, and visiting my uncle',
+		'lat': 33.448376,
+		'lon': -112.074036,
+		'travelpic': 'https://www.ourescapeclause.com/wp-content/uploads/2021/03/shutterstock_691184395-scaled.jpg'
+	},
+	{
+		'id': 4,
+		'title':'Dana Point, California',
+		'description': 'Celebratory and joyful time for a wedding and seeing family',
+		'lat': 	33.466972,
+		'lon': -117.698105,
+		'travelpic': 'https://upload.wikimedia.org/wikipedia/commons/6/62/Dana_Point_a_city_in_southern_Orange_County_CA_Photo_D_Ramey_Logan.jpg'
+	
+	}
+]
 
-		let map = L.map('map').setView([0,0], 3);
 
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
 
-// before looping the data, create an empty FeatureGroup
-let myMarkers = L.featureGroup();
+let map = L.map('map').setView([34.0687379,-118.4462871], 15);
 
-// loop through data
-data.forEach(function(item){
-	// create marker
-	let marker = L.marker([item.lat,item.lon]).bindPopup(item.title)
+var markerIcon = L.icon({
+	iconUrl: 'http://www.clker.com/cliparts/I/l/L/S/W/9/map-marker-hi.png',
+	iconSize: [20, 30],
+	popupAnchor: [0,0]
+	});
 
-	// add marker to featuregroup
-	myMarkers.addLayer(marker)
 
-	// add data to sidebar with onclick event
-	$('.sidebar').append(`<div class="sidebar-item" onclick="flyToIndex(${item.id})">${item.title}</div>`)
-})
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-// after loop, add the FeatureGroup to map
-myMarkers.addTo(map)
+	
 
-// define layers
-let layers = {
-	"My Markers": myMarkers
-}
-// add layer control box
-L.control.layers(null,layers).addTo(map)
-
-// function to fly to a location by a given id number
 function flyByIndex(index){
-	map.flyTo([data[index].lat,data[index].lon],12)
+	map.flyTo([travel[index].lat,travel[index].lon],travel[index].zoom)
 
-	// open the popup
+
 	myMarkers.getLayers()[index].openPopup()
 }
 
 
+let myMarkers = L.featureGroup();
+
+travel.forEach(function(item){
+
+	let marker = L.marker([item.lat,item.lon], {
+        title: item.title,
+        icon: markerIcon
+    })
+	.bindPopup("<b>" + item.title + "</b>" + "<br>" + "<br>"  + "<img src='" + item.travelpic + "'" + "height=200px width=300px style='border:1px solid rgb(0, 0, 0)'" + ">" + "<br>" + "<br>" + item.description)
+
+
+
+	myMarkers.addLayer(marker)
+
+	
+	$('.sidebar').append(`<div class="sidebar-item" onclick= 
+        "flyByIndex(${item.id})">${item.title}</div>`)
+})
 
 
 
 
 
-// function to fly to a location by a given id number
-function flyToIndex(index){
-	map.flyTo([data[index].lat,data[index].lon],12)
+myMarkers.addTo(map)
+
+
+let layers = {
+	"My Markers": myMarkers
 }
 
-// make the map zoom to the extent of markers
-map.fitBounds(myMarkers.getBounds());
+
+L.control.layers(null,layers).addTo(map)
+
+
+
+
+
+let btn = document.createElement("button");
+btn.innerHTML = "Save";
+btn.addEventListener("click", function () {
+  alert("Great choice! Let's go together!");
+});
+document.body.appendChild(btn);
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}

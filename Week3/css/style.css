@@ -5,53 +5,128 @@ body,html {
 }
 
 #map {
-	height: 100%;
+	height: 150%;
 }
 
 body {
-	display: grid;
-	grid-template-rows: 120px 1fr;
-	grid-template-columns: 50% 50%; /* change to 50/50 split */
+    display: grid;
+	grid-template-rows: 70px 1fr;
+	grid-template-columns: 250px 1fr;
 	grid-template-areas: 
 	"header header"
-	"content sidebar"; /* swapped places */
+	"sidebar content";
 }
 
 .header {
 	grid-area: header;
-	padding:10px;
-	background-color: #333;
-	color: white;
-	font-size: 2em;
-}
+	padding:5px;
+    background-image: url(https://images.prismic.io/vexels-landings/c30a75f0-ed89-494d-946d-ee3a90c26277_header+pattern.jpg?auto=compress,format);
+	font-size: 15px;
+    font-family: Helvetica;
+	-webkit-text-stroke: 1px rgb(44, 36, 139);
 
+}
 .sidebar {
-	color: white;
 	grid-area: sidebar;
 	padding:10px;
-	background-color: #555;
+    background-image: url(https://img.freepik.com/free-vector/ethnic-floral-seamless-pattern_1159-3574.jpg?w=2000);
+	font-size: 15px;
+    font-family: Helvetica;
+	-webkit-text-stroke: .7px rgb(44, 36, 139);
 }
-
 .content {
 	grid-area: content;
+    
 }
 
 .sidebar-item {
-    padding: 10px; /* adds inner padding */
-    background: gainsboro; /* background color */
-    border: 1px solid gray; /* border width, style, and color */
-    margin: 5px; /* outer padding */
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    border: 3px solid rgba(131, 104, 104, 0.621); 
+    margin: 5px;
+	border-style: dotted;
 }
-.sidebar {
-	grid-area: sidebar;
-	padding:10px;
-	background-color: #555;
-	overflow: auto; /* allows the sidebar to overflow with a scrollbar */
+
+.sidebar-item:hover {
+    background: rgb(40, 170, 210); 
+    border: 5px rgb(122, 118, 118); 
+    margin: 5px;
+		cursor: pointer;
+    transition: all .5s linear;
+	border-style: inset;
 }
-.sidebar-item {
-    padding: 10px; /* adds inner padding */
-    background: gainsboro; /* background color of the card */
-    border: 1px solid gray; /* border width and color */
-    margin: 5px; /* outer padding */
-	cursor: pointer; /* change cursor to hand on hover */
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 5000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(20, 127, 180);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: white;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+ color: rgb(20, 127, 180);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+
+.numbertext {
+color: rgb(20, 127, 180);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  background-color: white;
+}
+
+
+
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }

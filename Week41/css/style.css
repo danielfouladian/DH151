@@ -1,0 +1,135 @@
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+#map {
+	height: 100%;
+}
+
+body {
+    display: grid;
+	grid-template-rows: 100px 1fr;
+	grid-template-columns: 300px 1fr;
+	grid-template-areas: 
+	"header header"
+	"sidebar content";
+}
+
+.header {
+	grid-area: header;
+	padding:5px;
+    background-color: rgb(255, 91, 94);	
+    font-size: 20px;
+    font-family: Helvetica;
+
+
+}
+.sidebar {
+	grid-area: sidebar;
+	padding:15px;
+  background-image: url(https://www.discovergreece.com/sites/default/files/styles/hd_half/public/2019-11/1-the-acropolis-hill-in-athens_istock_000044148298.jpg?itok=l7GF9JwA);
+	font-size: 15px;
+  font-family: Helvetica;
+	-webkit-text-stroke: .5px rgb(255, 91, 94);
+  
+}
+.content {
+	grid-area: content;
+    
+}
+
+.sidebar-item {
+    padding: 8px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 91, 94);
+    margin: 3px;
+}
+
+.sidebar-item:hover {
+    background: rgb(255, 91, 94);
+    border: 5px rgb(25, 203, 234); 
+    margin: 5px;
+		cursor: pointer;
+    transition: all .2s linear;
+	border-style: inset;
+}
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 5000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-text-stroke: .7px rgb(255, 91, 94);
+
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgb(255, 91, 94);
+  padding: 15px 15px;
+}
+
+
+.text {
+ color: rgb(255, 255, 255);
+  font-size: 15px;
+  padding: 2px 2px;
+  position: absolute;
+  bottom: 3px;
+  width: 50%;
+  text-align: center;
+  background-color: rgb(255, 91, 94);
+
+}
+
+.numbertext {
+color: rgb(255, 255, 255);
+  font-size: 8px;
+  padding: 4px 10px;
+  position: absolute;
+  top: 0;
+  background-color: rgb(255, 91, 94);
+}
+
+
+
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

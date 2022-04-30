@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NYC Arrests</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="js/papaparse.min.js"></script>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+</head>
+<body>
+    
+
+	<div class="header">
+		<div class ="center">Arrests Across NYC</div>
+	</div>
+	<div class="sidebar">
+		<h3>HOW TO USE THE MAP</h3> 
+		<p>Click on a button below to explore the locations and types of arrests across the different boroughs of New York City.</p>
+		<P>On the right side of the map you are able to toggle between different racial categories to view the density of their recorded arrests.</P>
+		<p>Hover over a marker on the map to view specific arrest details.</p>
+		<div class="sidebar-box">
+			<h4>BOROUGHS</h4>
+			<div class="sidebar-item" onclick="flyToIndex(40.76762,-73.96820)">Manhattan</div>
+			<div class="sidebar-item" onclick="flyToIndex(40.85086,-73.88282)">The Bronx</div>
+			<div class="sidebar-item" onclick="flyToIndex(40.58154,-74.16021)">Staten Island</div>
+			<div class="sidebar-item" onclick="flyToIndex(40.64409,-73.95250)">Brooklyn</div>
+			<div class="sidebar-item" onclick="flyToIndex(40.732858,-73.791825)">Queens</div>
+		</div>
+	</div>
+	<div class="topnav">
+		<a href="index.html">MAP</a>
+		<a href="about.html">ABOUT</a>
+		<a href="https://danielfouladian.github.io/CrimeDH151/Week5/proposal">LINK TO PROPOSAL</a>
+	  </div>
+    
+	<div class="content">
+		<div id="map"></div>
+	</div>
+	<div class="footer">
+		Source: <a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/data">NYC Open Data</a>
+	</div>
+
+	<script src="js/map.js"></script>
+
+</body>
+</html>

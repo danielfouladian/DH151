@@ -1,3 +1,30 @@
+<style>
+
+img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+</style> 
+
+
 <head>
 	<title>About the Team</title>
 	<meta charset="utf-8" />
@@ -12,72 +39,81 @@
 		<div class ="center">About the Team</div>
 	</div>
 
-  <div class="topnav">
-    <a href="index.html">Map</a>
-    <a href="about.html">About</a>
-    <a href="https://danielfouladian.github.io/CrimeDH151/Week5/proposal">Link to Proposal</a>
-  </div>
+	<div class="topnav">
+		<a href="index.html">MAP</a>
+		<a href="about.html">ABOUT</a>
+		<a href="https://danielfouladian.github.io/CrimeDH151/Week5/proposal">LINK TO PROPOSAL</a>
+	  </div>
     
 	<div class="content">
-		<h1 id="about-us">About Us</h1>
+    <div class="content-text">
+      <h1 id="about-us">ABOUT US</h1>
+    </div>
         <h2 id="introduction">Introduction</h2>
         <p>Our team name is The Avengers of Data and our project will focus on crime data in New York City, with a particular emphasis on analyzing how socioeconomic and racial factors are correlated with the reporting and police response to crime. Our goal is to highlight how racial profiling affects certain groups in NYC and identify the groups that are more frequently subjected to criminalization. Our map is targeted towards the general public with hopes that our insight will inspire individuals to take action and educate others on the arrest phenomena.</p>
         <h2 id="meet-the-team-">Meet the Team!</h2>
         <table>
         <thead>
-        <tr>
-        <th style="text-align:center">Christina Cha</th>
-        <th style="text-align:center">Cynthia Gong</th>
-        <th style="text-align:center">Daniel Fouladian</th>
-        <th style="text-align:center">Kristina Thabet</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td style="text-align:center">Designer</td>
-        <td style="text-align:center">Data Analyst</td>
-        <td style="text-align:center">Data Analyst</td>
-        <td style="text-align:center">Writer / Data Analyst</td>
-        </tr>
-        <tr>
-        <td style="text-align:center"><img src="Cha.png" alt=""></td>
-        <td style="text-align:center"><img src="Gong.png" alt=""></td>
-        <td style="text-align:center"><img src="Daniel.png" alt=""></td>
-        <td style="text-align:center"><img src="Thabet.png" alt=""></td>
-        </tr>
-      
-        <tr>
-        <td style="text-align:center">Christina is a third year majoring in Business Economics and minoring in Digital Humanities. Professionally, she is interested in marketing, specifically product marketing, for the tech and entertainment industry. In her free time, she loves spending time with her cat and family.</td>
-        <td style="text-align:center">Cynthia is a third year studying Statistics and Digital Humanities. She’s interested in real estate, urban planning, and the entertainment industry. In her free time, she enjoys taking care of her houseplants and painting landscape scenery</td>
-        <td style="text-align:center">Daniel Fouladian is a senior pursuing a B.A in Psychology with a minor in Digital Humanities (2022). He continues to succeed academically as he was born deaf and wears a Cochlear Implant to hear. He hopes he can inspire many more to overcome their obstacles and hardships. In his free time, he loves to play sports and create using graphic design.</td>
-        <td style="text-align:center">Kristina is a senior pursuing a BS in Economics with a minor in Digital Humanities. Professionally, she is interested in social media marketing and fashion styling. In her free time, she loves sourcing vintage clothing and relaxing with friends and family.</td>
-        </tr>
-        </tbody>
-       
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href ="https://www.linkedin.com/in/chayejinchristina/"> <img src="link.png" width=50 alt=""> </a>
-        <a href ="mailto:ygcha76@ucla.edu"> <img src="mail.png" width=50 alt=""></a>
+          <tr>
+            <td style="text-align:center">
+              <a href ="https://www.linkedin.com/in/chayejinchristina/"> <img src="link.png" width=50 alt=""> </a>
+              <a href ="mailto:ygcha76@ucla.edu"> <img src="mail.png" width=50 alt=""></a>
+            </td>
+            <td style="text-align:center">
+              <a href ="https://www.linkedin.com/in/cynthiazgong/"> <img src="link.png" width=50 alt=""></a>
+              <a href ="mailto:cynthiagong@ucla.edu"> <img src="mail.png" width=50 alt=""></a>
+            </td>
+            <td style="text-align:center">
+              <a href ="https://www.linkedin.com/in/danielfouladian/"> <img src="link.png" width=50 alt=""></a>
+              <a href ="mailto:danielfouladian@live.com"> <img src="mail.png" width=50 alt=""></a>
+            </td>
+            <td style="text-align:center">
+              <a href ="https://www.linkedin.com/in/kristina-thabet-a741421a5/"> <img src="link.png" width=50 alt=""></a>
+              <a href ="mailto:KRISTINATHABET@GMAIL.COM"> <img src="mail.png" width=50 alt=""></a>  
+            </td>
+          </tr>
+          <tr>
+            <th style="text-align:center">Christina Cha</th>
+            <th style="text-align:center">Cynthia Gong</th>
+            <th style="text-align:center">Daniel Fouladian</th>
+            <th style="text-align:center">Kristina Thabet</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td style="text-align:center">Designer</td>
+            <td style="text-align:center">Data Analyst</td>
+            <td style="text-align:center">Data Analyst</td>
+            <td style="text-align:center">Writer / Data Analyst</td>
+            </tr>
+            <tr>
+            <td style="text-align:center"><img src="Cha.png" alt=""></td>
+            <td style="text-align:center"><img src="Gong.png" alt=""></td>
+            <td style="text-align:center"><img src="Daniel.png" alt=""></td>
+            <td style="text-align:center"><img src="Thabet.png" alt=""></td>
+            </tr>
+          
+            <tr>
+            <td style="text-align:center">Christina is a third year majoring in Business Economics and minoring in Digital Humanities. Professionally, she is interested in marketing, specifically product marketing, for the tech and entertainment industry. In her free time, she loves spending time with her cat and family.</td>
+            <td style="text-align:center">Cynthia is a third year studying Statistics and Digital Humanities. She’s interested in real estate, urban planning, and the entertainment industry. In her free time, she enjoys taking care of her houseplants and painting landscape scenery</td>
+            <td style="text-align:center">Daniel Fouladian is a senior pursuing a B.A in Psychology with a minor in Digital Humanities (2022). He continues to succeed academically as he was born deaf and wears a Cochlear Implant to hear. He hopes he can inspire many more to overcome their obstacles and hardships. In his free time, he loves to play sports and create using graphic design.</td>
+            <td style="text-align:center">Kristina is a senior pursuing a BS in Economics with a minor in Digital Humanities. Professionally, she is interested in social media marketing and fashion styling. In her free time, she loves sourcing vintage clothing and relaxing with friends and family.</td>
+            </tr>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href ="https://www.linkedin.com/in/cynthiazgong/"> <img src="link.png" width=50 alt=""></a>
-        <a href ="mailto:cynthiagong@ucla.edu"> <img src="mail.png" width=50 alt=""></a>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href ="https://www.linkedin.com/in/danielfouladian/"> <img src="link.png" width=50 alt=""></a>
-        <a href ="mailto:danielfouladian@live.com"> <img src="mail.png" width=50 alt=""></a>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href ="https://www.linkedin.com/in/kristina-thabet-a741421a5/"> <img src="link.png" width=50 alt=""></a>
-        <a href ="mailto:KRISTINATHABET@GMAIL.COM"> <img src="mail.png" width=50 alt=""></a>
-
-
+            </tbody>
+        
 
         </table>
         <h2 id="overview">Overview</h2>
         <p>Black Lives Matter is an international social movement, beginning in 2013, dedicated to not only ending police violence, but disrupting state-sanctioned violence against Black People. In May of 2020, the Black Lives Matter movement gained extreme attention after the police killing of George Floyd, a Black man in Minneapolis, Minnesota. Protesters and organizers gathered day-after-day to build local power and intervene against violence inflicted on Black communities. Our New York Crime data spans from May of 2020 to July 2020, shedding light on not only the types of arrests happening during this time, but what race the police officer perceived the perpetrator to be. As we focus our data on this time period, we hope to gain a better understanding of racially targeted police violence that occurs in New York. We also will see numeric values of perpetrator arrests along with their race, revealing the many protesters, particularly those of color, who were arrested at these protests for fighting against racism and anti-black violence. </p>
+        
         <h2 id="methodology">Methodology</h2>
         <p>We will be using web mapping as our methodology of inquiry to provide a more comprehensive and interactive investigation into our data. Contextualizing arrest data and crime statistics can often be difficult without seeing the location of where these crimes occured. This is because crime itself tends to be a location-based phenomenon, where certain locales tend to be more prone to crime than others. As a result, it is important we visualize our data points on a map.</p>
         <p>We plan on creating a multi-layered map that will provide a narrative on racial profiling by NYPD as well as a general comparison between crime and racial/socioeconomic background. The main feature of the map is to display demographic information for each neighborhood and compare it to the density of arrests in that neighborhood by racial background. Our arrests will be pinned onto the map by markers, enabling viewers to understand the arrest patterns by NYPD. </p>
+	</div>
+
+  <div class="footer">
+		Source: <a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/data">NYC Open Data</a>
 	</div>
 
 </body>
